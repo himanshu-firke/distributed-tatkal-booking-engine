@@ -42,15 +42,19 @@ Instead of receiving seat availability data, the application repeatedly displaye
 
 This happened multiple times within the first 60 seconds of the Tatkal window.
 
-![IRCTC High Load Error — "We are experiencing High Load - Please retry" displayed multiple times simultaneously](../images/irctc-high-load-error.png)
+**Screenshot — IRCTC at 11:00 AM (Tatkal window):**
+
+![IRCTC High Load — multiple "We are experiencing High Load - Please retry" errors stacked on screen](../images/irctc-high-load-error.png)
+
+> *Screenshot captured during a live Tatkal booking attempt. Each yellow alert box is a separate "High Load" error returned by the IRCTC server within seconds of the window opening.*
 
 ### Availability Refresh Storm
 
 This is not simply "too many users." It is a specific failure pattern:
 
 - At 11:00:00 AM, thousands of users simultaneously **refresh the availability page** — before attempting to book
-- This creates a sudden burst of read requests that is **orders of magnitude above normal traffic**
-- The availability service — which should be a cheap, fast read — becomes the first bottleneck
+- This creates a sudden burst of **read requests** that is orders of magnitude above normal traffic
+- The availability service — which should be a cheap, fast read — becomes the **first bottleneck**
 - Under a monolith, this refresh storm **competes for the same CPU and memory** as the booking service
 
 **Questions this project will investigate:**
@@ -61,6 +65,8 @@ This is not simply "too many users." It is a specific failure pattern:
 - Does serving availability from Redis (in-memory) prevent the storm from cascading?
 
 This real-world observation became one of the primary motivations for building the Distributed Tatkal Booking Engine.
+
+📄 **Full Case Study:** [Availability Refresh Storm Analysis](./case-studies/Availability%20Refresh%20Storm%20Analysis.pdf)
 
 ---
 
