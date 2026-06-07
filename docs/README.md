@@ -1,44 +1,101 @@
-# Distributed Tatkal Booking Engine — Documentation Index
+# Documentation Index
+### Distributed Tatkal Booking Engine
 
-All phase documentation lives here. Each phase builds on the previous one.
+All engineering documentation is organized by category and built phase-by-phase.
 
 ---
 
-## Project Phases
+## 🟢 Foundation
 
-| Phase | Title | Status |
+| Phase | Document | Status |
 |---|---|---|
-| [Phase 1](./phase-01-problem-statement.md) | Problem Statement | ✅ Done |
-| [Phase 2](./phase-02-requirements.md) | Requirements | ✅ Done |
-| Phase 3 | Problems At Scale | 🔜 Pending |
-| Phase 4 | Monolith Architecture | 🔜 Pending |
-| Phase 5 | Monolith Implementation | 🔜 Pending |
-| Phase 6 | Monolith Failure Report | 🔜 Pending |
-| Phase 7 | Service Boundaries | 🔜 Pending |
-| Phase 8 | Microservice ER & Sequence Diagrams | 🔜 Pending |
-| Phase 9 | Microservice Architecture & API Design | 🔜 Pending |
-| Phase 10 | Architecture Decision Records (ADR) | 🔜 Pending |
-| Phase 11 | Docker & Kubernetes Architecture | 🔜 Pending |
-| Phase 12 | Microservice Implementation | 🔜 Pending |
-| Phase 13 | Load Testing Plan | 🔜 Pending |
-| Phase 14 | Benchmark Report | 🔜 Pending |
+| 1 | [Problem Statement](./phases/phase-01-problem-statement.md) | ✅ Done |
+| 2 | [Requirements](./phases/phase-02-requirements.md) | ✅ Done |
+| 3 | [Problems At Scale](./phases/phase-03-problems-at-scale.md) | ✅ Done |
+
+## ⏳ Monolith
+
+| Phase | Document | Status |
+|---|---|---|
+| 4 | Monolith Architecture | Coming Soon |
+| 5 | Monolith Implementation | Coming Soon |
+| 6 | Monolith Failure Report | Coming Soon |
+
+## ⏳ Microservices
+
+| Phase | Document | Status |
+|---|---|---|
+| 7 | Service Boundaries | Coming Soon |
+| 8 | Microservice Architecture | Coming Soon |
+| 9 | Architecture Decision Records | Coming Soon |
+
+## ⏳ Infrastructure
+
+| Phase | Document | Status |
+|---|---|---|
+| 10 | Docker Architecture | Coming Soon |
+| 11 | Kubernetes Deployment | Coming Soon |
+| 12 | Autoscaling & HPA | Coming Soon |
+
+## ⏳ Validation
+
+| Phase | Document | Status |
+|---|---|---|
+| 13 | Load Testing Plan | Coming Soon |
+| 14 | Benchmark Report | Coming Soon |
 
 ---
 
-## Folder Structure
+## Folder Guide
 
-```
-irctc_tatkal_machine/
-├── docs/                        ← All phase documentation (you are here)
-│   ├── README.md
-│   ├── phase-01-problem-statement.md
-│   ├── phase-02-requirements.md
-│   └── ...
-├── prd/
-│   └── Distributed Tatkal Booking Engine.pdf
-└── (source code will be added in Phase 5+)
-```
+| Folder | Contents |
+|---|---|
+| `phases/` | All phase documents (markdown) |
+| `diagrams/` | Architecture diagrams — monolith, microservice, ER, sequence, K8s (Phase 4+) |
+| `adr/` | Architecture Decision Records (Phase 9) |
+| `benchmark/` | k6 load test results and comparison tables (Phase 14) |
+| `case-studies/` | Real-world IRCTC observations |
 
 ---
 
-> Documents are added phase by phase. No phase is documented until it is approved.
+## Document Format Guide
+
+| Content Type | Format | Why |
+|---|---|---|
+| Phase documents | `.md` (Markdown) | Readable on GitHub, diffable, version-controlled |
+| Architecture diagrams | Mermaid in `.md` + exported `.png` | Mermaid renders on GitHub; PNG for embedding |
+| ER diagrams | Mermaid in `.md` + exported `.png` | Same as above |
+| Sequence diagrams | Mermaid in `.md` | GitHub renders natively |
+| Benchmark tables | `.md` with tables | Easy to compare side-by-side |
+| Case studies | `.pdf` | Preserves formatting of external observations |
+| Screenshots | `.png` in `images/` | Referenced from phase docs |
+
+---
+
+## Who Reads What
+
+| Reader | What They Read | Time |
+|---|---|---|
+| **Recruiter** | Root README — overview, tech stack, architecture evolution diagram | 1–2 min |
+| **Hiring Manager** | Root README + Phase 1 (problem) + Phase 6 (failure report) + Phase 14 (benchmarks) | 5–10 min |
+| **Senior Engineer** | Phase 3 (scale problems) + Phase 9 (ADRs) + Phase 14 (benchmarks) + source code | 20–30 min |
+
+---
+
+## Diagram Plan
+
+All diagrams will live in `docs/diagrams/` and be referenced from phase documents.
+
+| Diagram | Created In | Format |
+|---|---|---|
+| Monolith Architecture | Phase 4 | Mermaid + PNG |
+| Monolith ER Diagram | Phase 4 | Mermaid + PNG |
+| Login Sequence | Phase 4 | Mermaid |
+| Booking Sequence | Phase 4 | Mermaid |
+| Concurrent Booking Sequence | Phase 4 | Mermaid |
+| Microservice Architecture | Phase 8 | Mermaid + PNG |
+| Service Communication | Phase 8 | Mermaid |
+| Kubernetes Deployment | Phase 11 | Mermaid + PNG |
+| HPA Autoscaling Flow | Phase 12 | Mermaid |
+
+---

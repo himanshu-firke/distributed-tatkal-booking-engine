@@ -44,7 +44,7 @@ This happened multiple times within the first 60 seconds of the Tatkal window.
 
 **Screenshot — IRCTC at 11:00 AM (Tatkal window):**
 
-![IRCTC High Load — multiple "We are experiencing High Load - Please retry" errors stacked on screen](../images/irctc-high-load-error.png)
+![IRCTC High Load — multiple "We are experiencing High Load - Please retry" errors stacked on screen](../../images/irctc-high-load-error.png)
 
 > *Screenshot captured during a live Tatkal booking attempt. Each yellow alert box is a separate "High Load" error returned by the IRCTC server within seconds of the window opening.*
 
@@ -66,7 +66,7 @@ This is not simply "too many users." It is a specific failure pattern:
 
 This real-world observation became one of the primary motivations for building the Distributed Tatkal Booking Engine.
 
-📄 **Full Case Study:** [Availability Refresh Storm Analysis](./case-studies/Availability%20Refresh%20Storm%20Analysis.pdf)
+📄 **Full Case Study:** [Availability Refresh Storm Analysis](../case-studies/Availability%20Refresh%20Storm%20Analysis.pdf)
 
 ---
 

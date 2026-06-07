@@ -1,0 +1,12 @@
+# Architecture diagrams will live here.
+# Added as phases are completed.
+#
+# Planned files:
+# ├── monolith-architecture.png
+# ├── microservice-architecture.png
+# ├── er-diagram.png
+# ├── sequence-login.png
+# ├── sequence-booking.png
+# ├── sequence-concurrent-booking.png
+# ├── k8s-deployment.png
+# └── hpa-flow.png
