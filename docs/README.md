@@ -17,7 +17,7 @@ All engineering documentation is organized by category and built phase-by-phase.
 
 | Phase | Document | Status |
 |---|---|---|
-| 4 | Monolith Architecture | Coming Soon |
+| 4 | [Monolith Architecture](./phases/phase-04-monolith-architecture.md) | ✅ Done |
 | 5 | Monolith Implementation | Coming Soon |
 | 6 | Monolith Failure Report | Coming Soon |
 

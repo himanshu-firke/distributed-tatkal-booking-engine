@@ -106,36 +106,6 @@ Only the endpoints required to demonstrate the architectural problems.
 
 ---
 
-## Explicitly Out of Scope
-
-The following are intentionally excluded. They add application complexity without advancing the distributed systems learning objectives.
-
-| Excluded | Reason |
-|---|---|
-| Frontend (React, Angular, any UI) | Backend architecture project — no UI layer |
-| Payment gateway or billing | Adds state machine complexity without concurrency value |
-| Booking cancellation / refund | Not relevant to the race condition or scaling problem |
-| Seat preference selection | Business logic, not systems architecture |
-| Multi-train or multi-date support | One resource contention scenario is sufficient |
-| Waitlists or queuing | Deliberate exclusion — we demonstrate rejection, not queuing |
-| Admin dashboard | No management interface needed |
-| Email / SMS notifications | Infrastructure concern, out of scope |
-| Real IRCTC integration | This is a controlled simulation environment |
-| Kafka, Event Sourcing, CQRS | Deliberate exclusion per project charter |
-
----
-
-## Future Enhancements (V2+)
-
-The following patterns are valid distributed systems concepts but are intentionally deferred. They belong to a more complex reservation lifecycle (closer to airline systems) than the Flash Sale model this project is based on.
-
-| Enhancement | Description | Why Deferred |
-|---|---|---|
-| Seat Lock TTL | Reserve a seat with a TTL; auto-release if booking not confirmed | Adds reservation state machine complexity not required for V1 |
-| Reservation Recovery | Re-credit inventory when TTL expires mid-flow | Requires TTL lock to be in place first |
-| Waitlist Queue | Queue users when seats are exhausted | Changes the problem from rejection-based to queue-based |
-
----
 
 ## Requirements Traceability
 

@@ -108,7 +108,7 @@ In a monolith, if Auth is overloaded, Booking is also starved — they share the
 ## What We Are NOT Solving
 
 | Out of Scope | Why |
-|---|---|
+|---|  ---|
 | Payment Processing | Adds complexity without teaching new distributed concepts |
 | Train Scheduling / PNR | Not relevant to the concurrency problem |
 | Seat Selection (berth preference) | Business logic, not systems architecture |

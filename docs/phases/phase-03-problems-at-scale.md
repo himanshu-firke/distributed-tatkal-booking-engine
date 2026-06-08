@@ -217,18 +217,6 @@ Services must run in **separate processes** with **separate resource pools**. Au
 
 ---
 
-## What We Are NOT Solving in This Phase
-
-This is an analysis phase — no code, no fixes. We are:
-
-- ✅ Documenting exactly how each failure manifests
-- ✅ Identifying the root cause of each problem
-- ❌ Not solving them yet (that is Phase 4+)
-- ❌ Not benchmarking exact numbers (that is Phase 6 and 14)
-- ❌ Not designing the microservice fix yet (that is Phase 7+)
-
----
-
 ## Assumptions
 
 - Failures described are based on a standard single-instance Node.js + MongoDB monolith
