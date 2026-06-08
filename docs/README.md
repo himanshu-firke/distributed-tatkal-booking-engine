@@ -18,7 +18,7 @@ All engineering documentation is organized by category and built phase-by-phase.
 | Phase | Document | Status |
 |---|---|---|
 | 4 | [Monolith Architecture](./phases/phase-04-monolith-architecture.md) | ✅ Done |
-| 5 | Monolith Implementation | Coming Soon |
+| 5 | [Monolith Implementation](./phases/phase-05-monolith-implementation.md) | ✅ Done |
 | 6 | Monolith Failure Report | Coming Soon |
 
 ## ⏳ Microservices
