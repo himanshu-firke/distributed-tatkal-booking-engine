@@ -21,7 +21,7 @@ cd monolith
 npm run dev
 ```
 
-![Server running on port 3000](../../load-tests/screenshots/server-running.png)
+![Server running on port 3000](../../load-tests/screenshots/seed-output.png)
 
 ### Step 2 — Seed the database
 
@@ -31,7 +31,7 @@ node scripts/seed.js
 
 This creates **10,000 users** and **1 train with 500 Tatkal seats**.
 
-![Seed output with Train ID](../../load-tests/screenshots/seed-output.png)
+![Seed output with Train ID](../../load-tests/screenshots/server-running.png)
 
 > **Copy the Train ID from the seed output.** You will need it for Scenarios B and C.
 
