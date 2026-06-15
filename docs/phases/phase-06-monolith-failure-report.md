@@ -1,5 +1,4 @@
 # Phase 6 — Monolith Failure Report
-### Distributed Tatkal Booking Engine
 
 ---
 
