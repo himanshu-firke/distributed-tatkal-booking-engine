@@ -26,8 +26,8 @@ All engineering documentation is organized by category and built phase-by-phase.
 | Phase | Document | Status |
 |---|---|---|
 | 7 | [Service Boundaries](./phases/phase-07-service-boundaries.md) | ✅ Done |
-| 8 | Microservice Architecture | 🚧 In Progress |
-| 9 | Architecture Decision Records | Coming Soon |
+| 8 | [Microservice Architecture](./phases/phase-08-microservice-architecture.md) | ✅ Done |
+| 9 | Architecture Decision Records | 🚧 In Progress |
 
 ## ⏳ Infrastructure
 
