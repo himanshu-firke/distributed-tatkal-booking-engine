@@ -74,13 +74,13 @@ During a real Tatkal booking attempt, I encountered this:
 | 2 | [Requirements](./docs/phases/phase-02-requirements.md) | Architecture-driven FRs and NFRs, concurrency model |
 | 3 | [Problems At Scale](./docs/phases/phase-03-problems-at-scale.md) | How each problem manifests technically under load |
 
-### ⏳ Monolith (Coming Soon)
+### ✅ Monolith (Complete)
 
 | Phase | Document | Description |
 |---|---|---|
-| 4 | Monolith Architecture | APIs, ER diagram, sequence diagrams |
-| 5 | Monolith Implementation | Node.js + Express + MongoDB monolith |
-| 6 | Monolith Failure Report | k6 load test results, bottleneck analysis |
+| 4 | [Monolith Architecture](./docs/phases/phase-04-monolith-architecture.md) | APIs, ER diagram, login and booking sequence diagrams |
+| 5 | [Monolith Implementation](./docs/phases/phase-05-monolith-implementation.md) | Node.js + Express + MongoDB monolith — 20 files, 3 intentional failure points |
+| 6 | [Monolith Failure Report](./docs/phases/phase-06-monolith-failure-report.md) | Real k6 load test results — bcrypt starvation, DB pool exhaustion, TOCTOU race condition |
 
 ### ⏳ Microservices (Coming Soon)
 
@@ -132,9 +132,16 @@ distributed-tatkal-booking-engine/
 ├── images/                    ← Screenshots and assets
 ├── prd/                       ← Original PRD
 ├── monolith/                  ← Monolith source code (Phase 5)
+│   ├── src/                   ← Express app, models, services, controllers
+│   └── scripts/               ← Seed script + race condition verifier
+├── load-tests/                ← k6 load test scripts (Phase 6)
+│   ├── scenario-a-auth-stress.js
+│   ├── scenario-b-seat-storm.js
+│   ├── scenario-c-booking-race.js
+│   ├── scenario-d-tatkal-combined.js
+│   └── screenshots/           ← Real test result screenshots
 ├── microservices/             ← Microservice source code (Phase 12)
-├── k8s/                       ← Kubernetes manifests (Phase 11)
-└── scripts/                   ← k6 load test scripts (Phase 13)
+└── k8s/                       ← Kubernetes manifests (Phase 11)
 ```
 
 ---
@@ -149,5 +156,26 @@ distributed-tatkal-booking-engine/
 | Monolith → Microservices evolution | Full railway reservation system |
 
 ---
+
+---
+
+## Current Progress
+
+```
+✅ Phase 1  Problem Statement
+✅ Phase 2  Requirements
+✅ Phase 3  Problems At Scale
+✅ Phase 4  Monolith Architecture
+✅ Phase 5  Monolith Implementation
+✅ Phase 6  Monolith Failure Report  ← real k6 results, data corruption proven
+🚧 Phase 7  Service Boundaries       ← in progress
+⏳ Phase 8  Microservice Architecture
+⏳ Phase 9  Architecture Decision Records
+⏳ Phase 10 Docker Architecture
+⏳ Phase 11 Kubernetes Deployment
+⏳ Phase 12 Autoscaling & HPA
+⏳ Phase 13 Load Testing Plan
+⏳ Phase 14 Benchmark Report
+```
 
 *This repository tells the story: Problem → Monolith → Failure → Microservices → Kubernetes → Autoscaling → Results*
