@@ -168,8 +168,8 @@ distributed-tatkal-booking-engine/
 ✅ Phase 4  Monolith Architecture
 ✅ Phase 5  Monolith Implementation
 ✅ Phase 6  Monolith Failure Report  ← real k6 results, data corruption proven
-🚧 Phase 7  Service Boundaries       ← in progress
-⏳ Phase 8  Microservice Architecture
+✅ Phase 7  Service Boundaries       ← 3 services, data ownership, API contracts
+🚧 Phase 8  Microservice Architecture
 ⏳ Phase 9  Architecture Decision Records
 ⏳ Phase 10 Docker Architecture
 ⏳ Phase 11 Kubernetes Deployment
